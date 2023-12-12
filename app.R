@@ -6,6 +6,8 @@ library(zip)
 
 #Version: Dec 12, 2023
 
+options(shiny.maxRequestSize = 60*1024^2)
+
 extract_states <- function(json_data) {
   parsed_data <- fromJSON(json_data)
   state_names <- names(parsed_data)
